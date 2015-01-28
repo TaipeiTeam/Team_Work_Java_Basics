@@ -2,8 +2,8 @@
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
-/.idea
-/.metadata
+.idea/
+.metadata/
 *.iml
 
 # Package Files #
