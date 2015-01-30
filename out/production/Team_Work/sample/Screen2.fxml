@@ -45,5 +45,10 @@
          </children>
       </VBox>
       <Separator layoutX="717.0" orientation="VERTICAL" prefHeight="600.0" prefWidth="6.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="717.0" AnchorPane.topAnchor="0.0" />
+      <Button layoutX="290.0" layoutY="310.0" mnemonicParsing="false" onAction="#goToScreen4" text="Throw Dices">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

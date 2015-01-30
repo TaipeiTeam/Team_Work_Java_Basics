@@ -19,6 +19,9 @@ public class Screen2Controller implements Initializable, ControlledScreen{
     public void initialize(URL url, ResourceBundle rb) {
     }
 
+
+
+
     @FXML
     private  void goToScreen1(ActionEvent event) {
         myController.setScreen(ScreensFramework.screen1ID);
@@ -26,6 +29,10 @@ public class Screen2Controller implements Initializable, ControlledScreen{
     @FXML
     private  void goToScreen3(ActionEvent event) {
         myController.setScreen(ScreensFramework.screen3ID);
+    }
+    @FXML
+    private  void goToScreen4(ActionEvent event) {
+        myController.setScreen(ScreensFramework.screen4ID);
     }
 
     public void exitPlatform(ActionEvent event) {

@@ -53,7 +53,7 @@
             </LinearGradient>
          </textFill>
       </Label>
-      <Button layoutX="425.0" layoutY="448.0" mnemonicParsing="false" onAction="#goToScreen2" prefWidth="150.0" text="Start">
+      <Button layoutX="425.0" layoutY="448.0" mnemonicParsing="false" onAction="#goToScreen2"  prefWidth="150.0" text="Start">
          <font>
             <Font size="24.0" />
          </font>
