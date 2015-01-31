@@ -16,7 +16,7 @@
             <Image url="@images/tablewithplayers.jpg" />
          </image>
       </ImageView>
-      <Button layoutX="273.0" layoutY="427.0" mnemonicParsing="false" text="Roll">
+      <Button layoutX="273.0" layoutY="427.0" mnemonicParsing="false" onAction="#rollDices" text="Roll">
          <font>
             <Font size="18.0" />
          </font>
@@ -24,12 +24,12 @@
             <Tooltip text="Roll dices" />
          </tooltip>
       </Button>
-      <Button fx:id="restartButton" layoutX="534.0" layoutY="402.0" mnemonicParsing="false" text="Restart">
+      <Button fx:id="restartButton" layoutX="534.0" layoutY="402.0" mnemonicParsing="false" onAction="#goToScreen1" text="Restart">
          <tooltip>
             <Tooltip text="Restart the game" />
          </tooltip>
       </Button>
-      <Button fx:id="stopButton" layoutX="534.0" layoutY="441.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="53.0" text="Stop">
+      <Button fx:id="stopButton" layoutX="534.0" layoutY="441.0" mnemonicParsing="false" onAction="#goToScreen4" prefHeight="25.0" prefWidth="53.0" text="Stop">
          <tooltip>
             <Tooltip text="Stop game till here" />
          </tooltip>
