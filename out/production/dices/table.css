@@ -1,0 +1,5 @@
+#mainAnchor {
+	-fx-background-image: url("../images/table.jpg");
+	-fx-background-repeat: no-repeat;
+	-fx-background-size: 100% 100%;
+}
