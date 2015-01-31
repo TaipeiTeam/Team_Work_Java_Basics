@@ -10,8 +10,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="dices.PlayersScreenController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dices.PlayersScreenController">
    <children>
       <ImageView fitHeight="480.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -92,7 +91,7 @@
             <Image url="@images/player2.jpg" />
          </image>
       </ImageView>
-      <Button fx:id="startButton" layoutX="239.0" layoutY="427.0" mnemonicParsing="false" text="Start Rolling">
+      <Button fx:id="startButton" layoutX="239.0" layoutY="427.0" mnemonicParsing="false" onAction="#goToScreen3" text="Start Rolling">
          <font>
             <Font size="18.0" />
          </font>
