@@ -28,7 +28,7 @@ public class ScreensFramework extends Application {
         mainController.loadScreen(ScreensFramework.screen3ID, ScreensFramework.screen3File);
         mainController.loadScreen(ScreensFramework.screen4ID, ScreensFramework.screen4File);
 
-                mainController.setScreen(ScreensFramework.screen1ID);
+        mainController.setScreen(ScreensFramework.screen1ID);
 
         Group root = new Group();
         root.getChildren().addAll(mainController);

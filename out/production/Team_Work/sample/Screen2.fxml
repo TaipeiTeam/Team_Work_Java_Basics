@@ -30,22 +30,31 @@
             <Font size="36.0" />
          </font>
       </Label>
-      <VBox layoutX="939.0" layoutY="519.0" spacing="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+      <VBox layoutX="915.0" layoutY="473.0" spacing="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
          <children>
-            <Button layoutX="939.0" layoutY="519.0" mnemonicParsing="false" onAction="#goToScreen1" prefWidth="75.0" text="Home">
+            <Button layoutX="927.0" layoutY="473.0" mnemonicParsing="false" onAction="#setPlaersName" prefWidth="100.0" text="Set Players">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button layoutX="527.0" layoutY="353.0" mnemonicParsing="false" onAction="#exitPlatform" prefWidth="75.0" text="Exit" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Button>
+            <VBox layoutX="939.0" layoutY="519.0" spacing="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+               <children>
+                  <Button layoutX="939.0" layoutY="519.0" mnemonicParsing="false" onAction="#goToScreen1" prefWidth="100.0" text="Home">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="527.0" layoutY="353.0" mnemonicParsing="false" onAction="#exitPlatform" prefWidth="100.0" text="Exit" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
          </children>
       </VBox>
       <Separator layoutX="717.0" orientation="VERTICAL" prefHeight="600.0" prefWidth="6.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="717.0" AnchorPane.topAnchor="0.0" />
-      <Button layoutX="290.0" layoutY="310.0" mnemonicParsing="false" onAction="#goToScreen4" text="Throw Dices">
+      <Button layoutX="290.0" layoutY="310.0" mnemonicParsing="false" onAction="#throwDices" text="Throw Dices">
          <font>
             <Font size="14.0" />
          </font>

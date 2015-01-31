@@ -13,6 +13,8 @@ import java.util.ResourceBundle;
  */
 public class Screen1Controller implements Initializable, ControlledScreen{
     ScreensController myController;
+
+//    public static int startOfGame = 0;
     @Override
     public void setScreenParent(ScreensController screenParent) {
         myController = screenParent;
@@ -22,10 +24,13 @@ public class Screen1Controller implements Initializable, ControlledScreen{
     public void initialize(URL url, ResourceBundle rb) {
     }
 
+
     @FXML
     private  void goToScreen2(ActionEvent event) {
+//        startOfGame++;
         myController.setScreen(ScreensFramework.screen2ID);
     }
+
     @FXML
     private  void goToScreen3(ActionEvent event) {
         myController.setScreen(ScreensFramework.screen3ID);

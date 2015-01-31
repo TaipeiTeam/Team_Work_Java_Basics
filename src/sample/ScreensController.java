@@ -12,7 +12,10 @@ import javafx.scene.Parent;
 import javafx.scene.layout.StackPane;
 
 import javafx.util.Duration;
+
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 /**
  * Created by radko on 30.1.2015 г..
@@ -20,6 +23,7 @@ import java.util.HashMap;
 public class ScreensController extends StackPane{
 
     private HashMap<String,Node> screens = new HashMap<String, Node>();
+    public static List<PlayersInfo> listPlayer = new ArrayList<>();
 
     public ScreensController() {
         super();

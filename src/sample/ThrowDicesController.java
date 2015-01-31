@@ -3,8 +3,11 @@ package sample;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.scene.shape.Circle;
+import javafx.stage.Stage;
 import sun.audio.AudioData;
 import sun.audio.AudioPlayer;
 import sun.audio.AudioStream;
@@ -20,23 +23,26 @@ import java.util.ResourceBundle;
  * Created by radko on 30.1.2015 г..
  */
 public class ThrowDicesController implements Initializable, ControlledScreen{
+    public Button rollDicesBtn;
+    public TextField throwInfo;
+    public Button closeButton;
     ScreensController myController;
-    public Circle circle11;
-    public Circle circle12;
-    public Circle circle13;
-    public Circle circle14;
-    public Circle circle15;
-    public Circle circle16;
-    public Circle circle21;
-    public Circle circle22;
-    public Circle circle23;
-    public Circle circle24;
-    public Circle circle25;
-    public Circle circle26;
-    public GridPane dice1;
+    public  Circle circle11;
+    public  Circle circle12;
+    public  Circle circle13;
+    public  Circle circle14;
+    public  Circle circle15;
+    public  Circle circle16;
+    public  Circle circle21;
+    public  Circle circle22;
+    public  Circle circle23;
+    public  Circle circle24;
+    public  Circle circle25;
+    public  Circle circle26;
+    public  GridPane dice1;
     public GridPane dice2;
-    public Circle circle1center;
-    public Circle circle2center;
+    public  Circle circle1center;
+    public  Circle circle2center;
     @Override
     public void setScreenParent(ScreensController screenParent) {
         myController = screenParent;
@@ -59,20 +65,22 @@ public class ThrowDicesController implements Initializable, ControlledScreen{
 //
 //        Platform.exit();
 //    }
-public void rollDices(ActionEvent actionEvent) throws InterruptedException {
-    clear();
-    try {
-        playSound();
-    } catch (InterruptedException e) {
-        e.printStackTrace();
+    public void rollDices(ActionEvent actionEvent) throws InterruptedException {
+        clear();
+        try {
+            playSound();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        Random random = new Random();
+        int numDice1 = random.nextInt(6);
+        int numDice2 = random.nextInt(6);
+        int sumDices = numDice1 + numDice2 + 2;
+        double rotateDice1 = random.nextInt((180-(-180)+1))+(-180);
+        double rotateDice2 = random.nextInt((180-(-180)+1))+(-180);
+        rollDice(numDice1,numDice2,rotateDice1,rotateDice2);
+        throwInfo.setText(String.valueOf(sumDices));
     }
-    Random random = new Random();
-    int numDice1 = random.nextInt(6);
-    int numDice2 = random.nextInt(6);
-    double rotateDice1 = random.nextInt((180-(-180)+1))+(-180);
-    double rotateDice2 = random.nextInt((180-(-180)+1))+(-180);
-    rollDice(numDice1,numDice2,rotateDice1,rotateDice2);
-}
 
     public static void playSound() throws InterruptedException {
         AudioPlayer MGP = AudioPlayer.player;
@@ -89,7 +97,7 @@ public void rollDices(ActionEvent actionEvent) throws InterruptedException {
         MGP.stop(loop);
     }
 
-    private void rollDice(int numDice1, int numDice2, double rottateDice1, double rottateDice2) {
+    public void rollDice(int numDice1, int numDice2, double rottateDice1, double rottateDice2) {
         dice1.setRotate(rottateDice1);
         dice1.setVisible(true);
         switch (numDice1+1) {
@@ -189,9 +197,14 @@ public void rollDices(ActionEvent actionEvent) throws InterruptedException {
         circle2center.setVisible(false);
         circle1center.setRadius(20.0);
         circle2center.setRadius(20.0);
+        throwInfo.setText("");
     }
+
     @FXML
-    private  void goToScreen2(ActionEvent event) {
-        myController.setScreen(ScreensFramework.screen2ID);
+    private void closeButtonAction(){
+        // get a handle to the stage
+        Stage stage = (Stage) closeButton.getScene().getWindow();
+        // do what you have to do
+        stage.close();
     }
 }
