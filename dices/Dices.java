@@ -20,7 +20,7 @@ public class Dices extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Image applicationIcon = new Image(getClass().getResourceAsStream("../images/dices_icon.png"));
+        Image applicationIcon = new Image(getClass().getResourceAsStream("images/dices_icon.png"));
         stage.getIcons().add(applicationIcon);
         stage.setTitle("Dices");
         Parent root = FXMLLoader.load(getClass().getResource("StartScreen.fxml"));
