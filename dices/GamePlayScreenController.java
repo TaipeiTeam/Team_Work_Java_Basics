@@ -99,27 +99,27 @@ public class GamePlayScreenController extends ControlledScreen implements Initia
         dice1.setVisible(true);
         switch (numDice1+1) {
             case 1:
-                circle1center.setRadius(30.0);
+                circle1center.setRadius(5.0);
                 circle1center.setVisible(true);
                 break;
             case 2:
-                circle11.setVisible(true);
-                circle14.setVisible(true);
+                circle12.setVisible(true);
+                circle15.setVisible(true);
                 break;
             case 3:
-                circle13.setVisible(true);
-                circle15.setVisible(true);
+                circle11.setVisible(true);
+                circle16.setVisible(true);
                 circle1center.setVisible(true);
                 break;
             case  4:
-                circle12.setVisible(true);
-                circle15.setVisible(true);
+                circle11.setVisible(true);
+                circle14.setVisible(true);
                 circle16.setVisible(true);
                 circle13.setVisible(true);
                 break;
             case  5:
-                circle12.setVisible(true);
-                circle15.setVisible(true);
+                circle11.setVisible(true);
+                circle14.setVisible(true);
                 circle16.setVisible(true);
                 circle13.setVisible(true);
                 circle1center.setVisible(true);
@@ -138,27 +138,27 @@ public class GamePlayScreenController extends ControlledScreen implements Initia
         dice2.setVisible(true);
         switch (numDice2+1) {
             case 1:
-                circle2center.setRadius(30.0);
+                circle2center.setRadius(5.0);
                 circle2center.setVisible(true);
                 break;
             case 2:
                 circle22.setVisible(true);
-                circle24.setVisible(true);
+                circle25.setVisible(true);
                 break;
             case 3:
-                circle23.setVisible(true);
-                circle25.setVisible(true);
+                circle21.setVisible(true);
+                circle26.setVisible(true);
                 circle2center.setVisible(true);
                 break;
             case  4:
                 circle21.setVisible(true);
-                circle25.setVisible(true);
+                circle24.setVisible(true);
                 circle26.setVisible(true);
                 circle23.setVisible(true);
                 break;
             case  5:
                 circle21.setVisible(true);
-                circle25.setVisible(true);
+                circle24.setVisible(true);
                 circle26.setVisible(true);
                 circle23.setVisible(true);
                 circle2center.setVisible(true);
@@ -190,7 +190,7 @@ public class GamePlayScreenController extends ControlledScreen implements Initia
         dice1.setVisible(false);
         circle1center.setVisible(false);
         circle2center.setVisible(false);
-        circle1center.setRadius(20.0);
-        circle2center.setRadius(20.0);
+        circle1center.setRadius(5.0);
+        circle2center.setRadius(5.0);
     }
 }
