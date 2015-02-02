@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="mainAnchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #ffffff;" stylesheets="@../style/gameStatisticsScreen.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Screen3StatisticController">
+   <children>
+      <VBox layoutX="268.0" layoutY="147.0" spacing="20.0" />
+      <Label layoutX="496.0" layoutY="50.0" prefHeight="77.0" prefWidth="442.0" text="Game Statistics" AnchorPane.topAnchor="50.0">
+         <font>
+            <Font name="System Bold" size="58.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#800909" />
+                  <Stop color="#a5c612" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <VBox layoutX="656.0" layoutY="368.0" spacing="25.0" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="50.0">
+         <children>
+            <Button layoutX="472.0" layoutY="247.0" mnemonicParsing="false" onAction="#refreshStatistic" prefHeight="50.0" prefWidth="120.0" text="Refresh">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="472.0" layoutY="291.0" mnemonicParsing="false" onAction="#goToScreen1" prefHeight="50.0" prefWidth="120.0" text="GoToStart">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="472.0" layoutY="335.0" mnemonicParsing="false" onAction="#goToScreen2" prefHeight="50.0" prefWidth="120.0" text="MainGame">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <TextArea id="textArea" fx:id="textView" layoutX="295.0" layoutY="77.0" prefHeight="300.0" prefWidth="403.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="50.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </TextArea>
+   </children>
+</AnchorPane>
