@@ -68,7 +68,11 @@ public class ThrowDicesController implements Initializable, ControlledScreen{
     public void rollDices(ActionEvent actionEvent) throws InterruptedException {
         clear();
         try {
+<<<<<<< HEAD
             playSound("RollDice.wav");
+=======
+            playSound();
+>>>>>>> origin/master
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -82,13 +86,21 @@ public class ThrowDicesController implements Initializable, ControlledScreen{
         throwInfo.setText(String.valueOf(sumDices));
     }
 
+<<<<<<< HEAD
     public static void playSound(String wavName) throws InterruptedException {
+=======
+    public static void playSound() throws InterruptedException {
+>>>>>>> origin/master
         AudioPlayer MGP = AudioPlayer.player;
         AudioStream BGM;
         AudioData MD ;
         ContinuousAudioDataStream loop = null; //we don`t want to play sound more than once but i don`t know how to play just once
         try {
+<<<<<<< HEAD
             BGM = new AudioStream(new FileInputStream(wavName));
+=======
+            BGM = new AudioStream(new FileInputStream("RollDice.wav"));
+>>>>>>> origin/master
             MD = BGM.getData();
             loop = new ContinuousAudioDataStream(MD);
         } catch (IOException error) {}

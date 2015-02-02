@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+<<<<<<< HEAD
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -62,6 +63,31 @@ public class Screen2Controller implements Initializable, ControlledScreen{
     public void exit(KeyEvent event) {
         Platform.exit();
     }
+=======
+import javafx.stage.Stage;
+
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class Screen2Controller implements Initializable, ControlledScreen{
+    ScreensController myController;
+    @Override
+    public void setScreenParent(ScreensController screenParent) {
+        myController = screenParent;
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+    }
+
+//    public static void setPlaersName (){
+//
+//    }
+//    public static void checkForNewgame() {
+//
+//    }
+>>>>>>> origin/master
 
 
     @FXML
@@ -87,12 +113,15 @@ public class Screen2Controller implements Initializable, ControlledScreen{
 //        clear.clear();
     }
 
+<<<<<<< HEAD
     public  void main(String[] args) {
         if (SetPlayersController.listPlayer.size() >=2) {
             informationLabel.setVisible(false);
         }
     }
 
+=======
+>>>>>>> origin/master
     public void exitPlatform(ActionEvent event) {
         Platform.exit();
     }
@@ -104,6 +133,7 @@ public class Screen2Controller implements Initializable, ControlledScreen{
         stage.setScene(new Scene(root, 600, 400));
         stage.show();
     }
+<<<<<<< HEAD
     public void checkForSetPlayers (){
         List<PlayersInfo> tempList = SetPlayersController.listPlayer;
         if (tempList.size() < 3){
@@ -477,5 +507,7 @@ public class Screen2Controller implements Initializable, ControlledScreen{
         circle2center.setRadius(5.0);
     }
 
+=======
+>>>>>>> origin/master
 
 }

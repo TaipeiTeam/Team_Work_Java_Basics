@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dices.GamePlayScreenController">
+   <children>
+      <ImageView fx:id="rollButton" fitHeight="480.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/tablewithplayers.jpg" />
+         </image>
+      </ImageView>
+      <Button layoutX="273.0" layoutY="427.0" mnemonicParsing="false" text="Roll">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <tooltip>
+            <Tooltip text="Roll dices" />
+         </tooltip>
+      </Button>
+      <Button fx:id="restartButton" layoutX="534.0" layoutY="402.0" mnemonicParsing="false" text="Restart">
+         <tooltip>
+            <Tooltip text="Restart the game" />
+         </tooltip>
+      </Button>
+      <Button fx:id="stopButton" layoutX="534.0" layoutY="441.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="53.0" text="Stop">
+         <tooltip>
+            <Tooltip text="Stop game till here" />
+         </tooltip>
+      </Button>
+   </children>
+</AnchorPane>

@@ -29,13 +29,19 @@ public class Screen1Controller implements Initializable, ControlledScreen{
     private  void goToScreen2(ActionEvent event) {
 //        startOfGame++;
         myController.setScreen(ScreensFramework.screen2ID);
+<<<<<<< HEAD
 //        Screen2Controller check = new Screen2Controller();
 //        check.checkForSetPlayers();
+=======
+>>>>>>> origin/master
     }
 
     @FXML
     private  void goToScreen3(ActionEvent event) {
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
         myController.setScreen(ScreensFramework.screen3ID);
     }
 

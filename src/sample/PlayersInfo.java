@@ -8,6 +8,7 @@ public class PlayersInfo {
     public String playerName;
     public int amountOfMonew;
     public int numOfThrows;
+<<<<<<< HEAD
     public  int bid;
 
     public int getBid() {
@@ -22,6 +23,14 @@ public class PlayersInfo {
 //        this.amountOfMonew = amountOfMonew;
 //        this.numOfThrows = numOfThrows;
 //    }
+=======
+
+    public PlayersInfo(String playerName, int amountOfMonew, int numOfThrows) {
+        this.playerName = playerName;
+        this.amountOfMonew = amountOfMonew;
+        this.numOfThrows = numOfThrows;
+    }
+>>>>>>> origin/master
 
     public String getPlayerName() {
         return playerName;

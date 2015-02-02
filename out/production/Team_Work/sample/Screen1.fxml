@@ -7,7 +7,11 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
+<<<<<<< HEAD
 <AnchorPane id="mainAnchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" stylesheets="@../style/welcomeScreenStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Screen1Controller">
+=======
+<AnchorPane id="mainAnchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" stylesheets="@../style/myStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Screen1Controller">
+>>>>>>> origin/master
    <children>
       <VBox layoutX="435.0" layoutY="368.0" spacing="20.0" />
       <Label id="welcomeLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="230.0" layoutY="52.0" text="Wellcome to our game!" textAlignment="CENTER">

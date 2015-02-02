@@ -1,5 +1,6 @@
 package sample;
 
+<<<<<<< HEAD
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -11,10 +12,13 @@ import javafx.stage.Stage;
 import java.util.ArrayList;
 import java.util.List;
 
+=======
+>>>>>>> origin/master
 /**
  * Created by radko on 31.1.2015 г..
  */
 public class SetPlayersController {
+<<<<<<< HEAD
     public static List<PlayersInfo> listPlayer = new ArrayList<>();
     public TextField player1Name;
     public TextField player2Name;
@@ -56,5 +60,7 @@ public class SetPlayersController {
         }
     }
 
+=======
+>>>>>>> origin/master
 
 }
