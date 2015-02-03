@@ -67,9 +67,9 @@ public class Screen3StatisticController implements Initializable, ControlledScre
                             break;
                         case Cell.CELL_TYPE_STRING :
                             String seekingName = cell.getStringCellValue();
-//                            if (seekingName.toLowerCase().equals(winnerName.toLowerCase())) {
-//                            output.insert(0,"->");
-//                            }
+                            if (seekingName.toLowerCase().equals(Screen2Controller.winnerName.toLowerCase())) {
+                            output.insert(0,"->");
+                            }
                             output.append(seekingName);
                             while (output.length()<12*tempCount){
                                 output.append(" ".toUpperCase());

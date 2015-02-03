@@ -28,6 +28,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URL;
 import java.util.*;
+import javafx.scene.control.SplitPane;
+import javafx.scene.control.TextArea;
 
 public class Screen2Controller implements Initializable, ControlledScreen{
     public  LinkedHashMap<String,Integer> throwList = new LinkedHashMap<>();
@@ -45,11 +47,21 @@ public class Screen2Controller implements Initializable, ControlledScreen{
     public Label winnerLabel;
     public Button resetBtn;
     public Label whoWon;
+    public Label player1NameStat;
+    public Label player2NameStat;
+    public TextArea player1TextArea;
+    public TextArea player2TextArea;
+    public SplitPane statisticSplitPane;
+    
     ScreensController myController;
     public static int dicesSumPlayer1;
     public static int dicesSumPlayer2;
     public static int sumDices;
-    public static  int tempCount = 1;
+    public static int tempCount = 1;
+    public static String[] playerStatString = new String[50];
+    public static int stringIndexCounter = 0;
+    public static int insertTextIndex1 = 0;
+    public static int insertTextIndex2 = 0;
 
 
     @Override
@@ -132,6 +144,8 @@ public class Screen2Controller implements Initializable, ControlledScreen{
             }else {
                 playersTurn.setText(SetPlayersController.listPlayer.get(1).getPlayerName() + "'s turn");
             }
+            player1NameStat.setText(SetPlayersController.listPlayer.get(0).getPlayerName() + "'s throws");
+            player2NameStat.setText(SetPlayersController.listPlayer.get(1).getPlayerName() + "'s throws");
             informationLabel.setVisible(false);
             startBtn.setDisable(true);
             startBtn.setVisible(false);
@@ -140,7 +154,6 @@ public class Screen2Controller implements Initializable, ControlledScreen{
 
             throwBtn.setDisable(false);
             throwBtn.setVisible(true);
-
         }
     }
 
@@ -219,10 +232,24 @@ public class Screen2Controller implements Initializable, ControlledScreen{
         if (throwList.size() < 1) {
             throwList.put(SetPlayersController.listPlayer.get(0).getPlayerName(),sumDices);
             refreshPlayersInfo1(SetPlayersController.listPlayer.get(0).getPlayerName(),sumDices);
+            player1TextArea.appendText((SetPlayersController.listPlayer.get(0).getNumOfThrows() + 1) + " " +
+                    SetPlayersController.listPlayer.get(0).getPlayerName() + "`s throw -> " + sumDices + "\n");
+//            playerStatString[stringIndexCounter] = "" + sumDices;
+//            player1TextArea.insertText(insertTextIndex1, "Dices = " + playerStatString[stringIndexCounter] + "\n");
+//            player1TextArea.insertText(insertTextIndex1, "\n");
+//            stringIndexCounter++;
+//            insertTextIndex1++;
         }else {
             throwList.put(SetPlayersController.listPlayer.get(1).getPlayerName(), sumDices);
             refreshPlayersInfo1(SetPlayersController.listPlayer.get(1).getPlayerName(),sumDices);
-
+            player2TextArea.appendText((SetPlayersController.listPlayer.get(1).getNumOfThrows() + 1) + " " +
+                    SetPlayersController.listPlayer.get(1).getPlayerName() + "`s throw -> " + sumDices + "\n");
+//            playerStatString[stringIndexCounter] = "" + sumDices;
+//            player2TextArea.insertText(insertTextIndex2, "Dices = " + playerStatString[stringIndexCounter] + "\n");
+//            player2TextArea.insertText(insertTextIndex2, "\n");
+//            stringIndexCounter++;
+//            insertTextIndex2++;
+            
             calculation(throwList);
             throwBtn.setOpacity(1);
             throwList.clear();
@@ -273,16 +300,27 @@ public class Screen2Controller implements Initializable, ControlledScreen{
                     listOfPlayer.numOfThrows++;
                 }
                 whoWon.setText(winner + " just won the bid and " + SetPlayersController.listPlayer.get(0).bid + " leva");
+                if (winner.equals(SetPlayersController.listPlayer.get(0).getPlayerName())) {
+                    player1TextArea.appendText(winner + " just won the bid and " + SetPlayersController.listPlayer.get(0).bid + " leva\n");
+                }else {
+                    player2TextArea.appendText(SetPlayersController.listPlayer.get(1).getPlayerName() + " just won the bid and " + SetPlayersController.listPlayer.get(1).bid + " leva\n");
+                }
                 player1Money.setText(String.valueOf(SetPlayersController.listPlayer.get(0).getAmountOfMonew()));
                 player2Money.setText(String.valueOf(SetPlayersController.listPlayer.get(1).getAmountOfMonew()));
             } else {
                 whoWon.setText("The dices are equal");
+                player1TextArea.appendText("The dices are equal");
+                player2TextArea.appendText("The dices are equal");
             }
         }
         if (SetPlayersController.listPlayer.get(0).getAmountOfMonew() == 0 || SetPlayersController.listPlayer.get(1).getAmountOfMonew() == 0) {
             throwBtn.setDisable(true);
             resetBtn.setDisable(false);
             resetBtn.setVisible(true);
+            Arrays.fill(playerStatString, null);
+            stringIndexCounter = 0;
+            insertTextIndex1 = 0;
+            insertTextIndex2 = 0;
             checkForWinnerName();
         }
     }
@@ -307,6 +345,11 @@ public class Screen2Controller implements Initializable, ControlledScreen{
             }
         }
         winnerLabel.setText("The winner is: " + winnName + "!!!");
+        if (winnName.equals(SetPlayersController.listPlayer.get(0).getPlayerName())) {
+            player1TextArea.appendText("The winner is: " + winnName + "!!!\n");
+        }else {
+            player2TextArea.appendText("The winner is: " + SetPlayersController.listPlayer.get(1).getPlayerName() + "!!!\n");
+        }
         winnerLabel.setDisable(false);
         winnerLabel.setVisible(true);
         winnerName = winnName;
@@ -318,12 +361,15 @@ public class Screen2Controller implements Initializable, ControlledScreen{
         }
         resetBtn.setDisable(false);
         resetBtn.setOpacity(1.0);
+        
 
     }
 
     @FXML
     private void resetGame(ActionEvent event) {
         SetPlayersController.listPlayer.clear();
+        player1TextArea.clear();
+        player2TextArea.clear();
         throwList.clear();
         setPlayersBtn.setVisible(true);
         setPlayersBtn.setDisable(false);
@@ -338,6 +384,7 @@ public class Screen2Controller implements Initializable, ControlledScreen{
         player1Name.setVisible(false);
         player2Name.setVisible(false);
         player2Money.setVisible(false);
+        playersTurn.setText("");
         tempCount = 1;
         clear();
         starGame(event);
