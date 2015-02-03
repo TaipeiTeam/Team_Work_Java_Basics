@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Screen3Controller">
+   <children>
+      <VBox layoutX="268.0" layoutY="147.0" spacing="20.0">
+         <children>
+            <Button layoutX="268.0" layoutY="147.0" mnemonicParsing="false" onAction="#goToScreen1" prefWidth="100.0" text="Screen 1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="268.0" layoutY="188.0" mnemonicParsing="false" onAction="#goToScreen2" prefWidth="100.0" text="Screen 2">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <Label layoutX="250.0" layoutY="46.0" text="Screen 3" AnchorPane.topAnchor="46.0">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

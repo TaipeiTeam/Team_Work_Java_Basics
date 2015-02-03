@@ -1,0 +1,14 @@
+#mainAnchor {
+	-fx-background-image: url("../images/screen2_background.png");
+	-fx-background-repeat: no-repeat;
+	-fx-background-size: 100% 100%;
+}
+.button:hover {
+	-fx-opacity: 100%
+}
+#anchor1 {
+    -fx-background-image: url("../images/img1.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 100% 100%;
+}
+

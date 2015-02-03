@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import java.net.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="mainAnchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../style/styleSetPlayersWindow.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SetPlayersController">
+   <children>
+      <VBox layoutX="106.0" layoutY="62.0" spacing="15.0">
+         <children>
+            <HBox layoutX="125.0" layoutY="60.0" spacing="20.0">
+               <children>
+                  <Label layoutX="125.0" layoutY="64.0" text="Player 1 Name:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="player1Name" layoutX="212.0" layoutY="60.0" prefWidth="250.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox layoutX="125.0" layoutY="111.0" spacing="20.0">
+               <children>
+                  <Label layoutX="125.0" layoutY="111.0" text="Player 2 Name:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <VBox>
+                     <children>
+                        <TextField fx:id="player2Name" layoutX="270.0" layoutY="112.0" prefWidth="250.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox layoutX="125.0" layoutY="163.0" spacing="20.0">
+               <children>
+                  <Label layoutX="125.0" layoutY="111.0" text="Cash debit:      ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="cashDebit" layoutX="270.0" layoutY="112.0" prefWidth="250.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Button fx:id="setPlayersBtn" layoutX="513.0" layoutY="328.0" mnemonicParsing="false" onAction="#setListPlayer" prefWidth="75.0" text="OK" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Label fx:id="informationLabel" layoutX="50.0" layoutY="22.0" prefWidth="500.0" textAlignment="CENTER" textFill="#d11515" AnchorPane.topAnchor="20.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
