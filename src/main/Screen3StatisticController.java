@@ -63,26 +63,21 @@ public class Screen3StatisticController implements Initializable, ControlledScre
                             while (output.length()<12*tempCount){
                                 output.append(" ".toUpperCase());
                             }
-                            String tempStr = String.valueOf(output);
                             break;
                         case Cell.CELL_TYPE_STRING :
                             String seekingName = cell.getStringCellValue();
-                            if (seekingName.toLowerCase().equals(Screen2Controller.winnerName.toLowerCase())) {
+                            if (seekingName.toLowerCase().equals(GameScreenController.winnerName.toLowerCase())) {
                             output.insert(0,"->");
                             }
                             output.append(seekingName);
                             while (output.length()<12*tempCount){
                                 output.append(" ".toUpperCase());
                             }
-                             tempStr = String.valueOf(output);
-
                             break;
                     }
                     tempCount++;
                 }
                 output.append("\n");
-                String tempStr = String.valueOf(output);
-
                 textView.appendText(String.valueOf(output));
             }
             file.close();

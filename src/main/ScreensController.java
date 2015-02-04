@@ -56,10 +56,12 @@ public class ScreensController extends StackPane{
     //the new screen is been added second, and then the current screen is removed.
     //If there isn`t any screen being displayed, the new screen is just added to the root.
     public  boolean setScreen(final String name) {
-        if (screens.get(name) != null) {         //screen loaded
+        //screen loaded
+        if (screens.get(name) != null) {
             final DoubleProperty opacity = opacityProperty();
 
-            if (!getChildren().isEmpty()) {    //if there is more than one screen
+            //if there is more than one screen
+            if (!getChildren().isEmpty()) {
                 Timeline fade = new Timeline(
                         new KeyFrame(Duration.ZERO, new KeyValue(opacity, 1.0)),
                         new KeyFrame(new Duration(900), new EventHandler<ActionEvent>() {
@@ -76,7 +78,8 @@ public class ScreensController extends StackPane{
                 fade.play();
         }else {
             setOpacity(0.0);
-            getChildren().add(screens.get(name));  //no one else been displayed, then just show
+            //no one else been displayed, then just show
+            getChildren().add(screens.get(name));
             Timeline fadeIn = new Timeline(
                     new KeyFrame(Duration.ZERO, new KeyValue(opacity, 0.0)),
                     new KeyFrame(new Duration(900), new KeyValue(opacity, 1.0)));
