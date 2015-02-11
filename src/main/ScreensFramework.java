@@ -6,6 +6,8 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
+import java.util.regex.Pattern;
+
 /**
  * Created by radko on 30.1.2015 г..
  */
